@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo hàm vào sử dụng hàm</title>
+<script>
+    function inputArrya(a) {
+        let sizeArr;
+        do {
+            sizeArr=+prompt("Nhập vào độ dài của mảng: ");
+        }
+        while (sizeArr<=0);
+        for (let i=0;i<sizeArr;i++) {
+            a[i]=+prompt("Nhập vào phần tử "+i+" của mảng:");
+        }
+    }
+    function dispalyArray(a) {
+        for (let i=0;i<a.length;i++) {
+            document.write(a[i]+" ,");
+        }
+
+    }
+    function findMin(a) {
+        let min=a[0];
+        for (let i=1;i<a.length;i++) {
+            if (min>a[i])
+                min=a[i]
+        }
+        return min;
+    }
+</script>
+</head>
+<body>
+<script>
+    let num=[];
+    inputArrya(num);
+    dispalyArray(num);
+    let minValue=findMin(num);
+    document.write("<br>"+"Giá trị nhỏ nhất là: "+minValue);
+</script>
+</body>
+</html>

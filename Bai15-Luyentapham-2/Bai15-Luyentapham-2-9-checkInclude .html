@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập luyện mảng</title>
+</head>
+<body>
+<script>
+function inputArray(a) {
+    let arrSize;
+    do {
+        arrSize = +prompt("Nhập vào độ dài của mảng: ");
+    }
+    while (arrSize<=0);
+    for (let i=0;i<arrSize;i++) {
+        a[i]=+prompt("Nhập phần tử thứ "+i+" của mảng:")
+    }
+}
+function displayArray(a) {
+    for (let i=0;i<a.length;i++) {
+        document.write(a[i]+",");
+    }
+}
+
+function checkIncludes(a) {
+    let count=0;
+    let value=+prompt("Enter a number: ");
+    for (let i=0;i<a.length;i++) {
+        if (value==a[i])
+            count++;
+    }
+    return count;
+}
+
+let num=[];
+inputArray(num);
+displayArray(num);
+document.write("<br>");
+let x=checkIncludes(num);
+    if (x>0) {
+        document.write(x);
+    } else {
+        document.write("-1");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo hàm vào sử dụng hàm</title>
+<script>
+    function inputArrya(a) {
+        let sizeArr;
+        do {
+            sizeArr=+prompt("Nhập vào độ dài của mảng: ");
+        }
+        while (sizeArr<=0);
+        for (let i=0;i<sizeArr;i++) {
+            a[i]=+prompt("Nhập vào phần tử "+i+" của mảng:");
+        }
+    }
+    function dispalyArray(a) {
+        for (let i=0;i<a.length;i++) {
+            document.write(a[i]+" ,");
+        }
+
+    }
+    function reverseArray(a) {
+        let i=0;
+        let j=a.length-1;
+        while (i<j) {
+            let x=a[i];
+            a[i]=a[j];
+            a[j]=x;
+            i++;
+            j--;
+        }
+        document.write(a);
+    }
+
+</script>
+</head>
+<body>
+<script>
+    let num=[];
+    inputArrya(num);
+    dispalyArray(num);
+    document.write('<br>');
+    reverseArray(num);
+</script>
+</body>
+</html>

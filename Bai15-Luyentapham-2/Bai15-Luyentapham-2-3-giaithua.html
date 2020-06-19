@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo hàm vào sử dụng hàm</title>
+<script>
+    function giaithua(a) {
+        if (a==2)
+            return 2;
+        return a*giaithua(a-1);
+    }
+</script>
+</head>
+<body>
+<script>
+    let x=prompt("enter a number:")
+    let result=giaithua(x);
+    document.write("Giai thừa của " +x+" bằng "+result);
+</script>
+</body>
+</html>
