@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo hàm vào sử dụng hàm</title>
+<script>
+    let starName=["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let starArea=["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function isIncludes(star) {
+        star=prompt("Enter name of star:")
+        for (i=0;i<starName.length;i++) {
+            if (starName[i]==star) {
+                let result=starArea[i];
+                document.write(starName[i]+" is included "+result);
+            }
+        }
+    }
+</script>
+</head>
+<body>
+<script>
+    isIncludes();
+</script>
+</body>
+</html>
